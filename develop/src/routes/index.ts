@@ -1,7 +1,11 @@
 import { Router } from 'express';
-import apiRoutes from './api/index.js';
+import { userRoutes } from './userRoutes.js';
+import { thoughtRoutes } from './thoughtRoutes.js';
+
+
 const router = Router();
 
-router.use('/api', apiRoutes);
+router.use('/users', userRoutes);
+router.use('/thoughts', thoughtRoutes);
 
 export default router;
